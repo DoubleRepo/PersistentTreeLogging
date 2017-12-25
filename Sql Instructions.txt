@@ -1,0 +1,9 @@
+SQL instructions:
+
+Import the Tree.sql and after that create a "scheduler" inside your MySQL database. 
+
+Import this scheduler task:
+
+CREATE DEFINER=`root`@`localhost` EVENT `Re-grow tree's` ON SCHEDULE EVERY 1 HOUR STARTS '2017-12-11 11:11:11' ON COMPLETION PRESERVE ENABLE DO Delete FROM `tree` WHERE DATE(added) < DATE(NOW() - INTERVAL 10 DAY)
+
+And turn the scheduler ON!
