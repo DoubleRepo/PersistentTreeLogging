@@ -5,9 +5,11 @@ Tree Logging Persistent for Exile.
 
 Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
 
+Add the additions from Exile.ini to your Exile.ini.
+
 Drag the Server Addon to your ExileServer Addons folder and profit.
 
-Oyeeh, don't forget to read the Sql Instructions.txt 
+> Oyeeh, don't forget to read the Sql Instructions.txt <
 
 ## License
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
