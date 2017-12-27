@@ -1,6 +1,12 @@
 # PersistentTreeLogging
 Tree Logging Persistent for Exile.
 
+# Todo
+Make tree's regrow realistic by setting a status code to the entry after a "" mount of days. 
+From that status code spawn in small bush, medium bush or big bush/small tree.
+
+Give option to "regrowing" tree to "pull out" so its gone again and reset status code.
+
 ## Configuration
 
 Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
