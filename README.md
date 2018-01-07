@@ -30,4 +30,4 @@ Fuck you and you're donations, send them to Exile.
 http://www.exilemod.com/donate/make-donation/
 
 
-You still reading? Fine,, Questions and other BS, or if you really wanna donate me a cup of coffee https://discord.gg/SjqDMhS
+You still reading? Fine,, Questions and other BS, or if you really wanna donate me a cup of coffee https://discord.united-gamers.online
