@@ -2,11 +2,14 @@
 Tree Logging Persistent for Exile.
 
 # Todo
-Make tree's regrow realistic by setting a status code to the entry after a "" mount of days. 
+-Make tree's regrow realistic by setting a status code to the entry after a "" mount of days. 
+- Sorta Done
 
-From that status code spawn in small bush, medium bush or big bush/small tree.
+-From that status code spawn in small bush, medium bush or big bush/small tree.
+- Sorta Same
 
-Give option to "regrowing" tree to "pull out" so its gone again and reset status code.
+ -- Give option to "regrowing" tree to "pull out" so its gone again and reset status code. -- 
+- keeping this on my own server. 
 
 ## Configuration
 
