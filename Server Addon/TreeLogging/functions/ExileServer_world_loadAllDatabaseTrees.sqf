@@ -31,5 +31,5 @@ while {_continueLoading} do
 		_continueLoading = false;
 	};
 };
-"Done loading trees!" call ExileServer_TreeLogging_log;
+format ["Done loading and smashed %1 tree's into something else", _numberOfTrees] call ExileServer_TreeLogging_log;
 true
