@@ -8,18 +8,18 @@ Tree Logging Persistent for Exile.
 -From that status code spawn in small bush, medium bush or big bush/small tree.
 - Sorta Same
 
- -- Give option to "regrowing" tree to "pull out" so its gone again and reset status code. -- 
+-Give option to "regrowing" tree to "pull out" so its gone again and reset status code.
 - keeping this on my own server. 
 
 ## Configuration
 
-Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
+- 1: Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
 
-Add the additions from Exile.ini to your Exile.ini.
+- 2: Add the additions from Exile.ini to your Exile.ini.
 
-Drag the Server Addon to your ExileServer Addons folder and profit.
+- 3: Import the Tree.sql inside your MySQL database. 
 
-> Oyeeh, don't forget to read the Sql Instructions.txt <
+- 4: Drag the Server Addon to your ExileServer Addons folder and profit.
 
 ## License
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
