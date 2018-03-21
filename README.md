@@ -11,6 +11,8 @@ Tree Logging Persistent for Exile.
 -Give option to "regrowing" tree to "pull out" so its gone again and reset status code.
 - keeping this on my own server. 
 
+-Reduced spam and mysql queries.
+
 ## Configuration
 
 - 1: Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
