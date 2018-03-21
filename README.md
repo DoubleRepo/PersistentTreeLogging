@@ -11,7 +11,8 @@ Tree Logging Persistent for Exile.
 -Give option to "regrowing" tree to "pull out" so its gone again and reset status code.
 - keeping this on my own server. 
 
--Reduced spam and mysql queries.
+-Fuck whut? 
+- Reduced spam and extdb calls.
 
 ## Configuration
 
