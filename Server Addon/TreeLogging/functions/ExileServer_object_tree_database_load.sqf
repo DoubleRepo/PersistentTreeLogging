@@ -8,10 +8,10 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-private["_treeID", "_data", "_position", "_Regrow", "_Tree","_randBush","_BushObject","_BushId"];
+private["_treeID", "_data", "_position", "_Regrow", "_Tree","_randBush","_BushObject"];
 _treeID = _this;
 _data = format ["loadTree:%1", _treeID] call ExileServer_system_database_query_selectSingle;
-_position = [_data select 0, _data select 1, _data select 2];
+_position = [_data select 0, _data select 1, 0];
 _Regrow = _data select 3;
 (nearestTerrainObjects [_position, [], 1, false, true]) params [["_Tree", objNull, [objNull]]];
 
@@ -20,7 +20,6 @@ _Regrow = _data select 3;
 // So lets just assume one restarts his server every 4 hours.
 
 FuckingTrees = profileNamespace getVariable "FuckingTrees";
-
 if (isNil "FuckingTrees") then
 {
 	FuckingTrees = 0;
@@ -68,9 +67,11 @@ switch (_Regrow) do
 	};
 	case 1:
 	{
-		format ["Hiding Tree:%1 @ %2", _Tree, _Position] call ExileServer_TreeLogging_log;
+		if (DamnTreeDebug) then
+		{
+			format ["Hiding Tree:%1 @ %2", _Tree, _Position] call ExileServer_TreeLogging_log;
+		};
 		_Tree hideObjectGlobal true;
-
 		_BushObject = createSimpleObject ["a3\plants_f\clutter\c_Thistle_High_Dead.p3d",[0,0,0]]; 
 		_BushObject setDir random 360; 
 		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
@@ -91,14 +92,10 @@ switch (_Regrow) do
 			format ["Hiding Tree:%1 @ %2", _Tree, _Position] call ExileServer_TreeLogging_log;
 		};
 		_Tree hideObjectGlobal true;
-
 		_BushObject = createSimpleObject ["a3\plants_f\bush\b_neriumo2d_f.p3d",[0,0,0]]; 				
-		_BushId = netId _BushObject;
 		_BushObject setDir random 360; 
 		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
-		//RegrowObjectArray pushBack _BushId;
-		//RegrowObjectArrayServer pushBack [_treeID,_BushId];
 		if (DamnTreeDebug) then
 		{
 			format ["Created replacement bush at Tree:%1 with NETID %2", _BushObject, _BushId] call ExileServer_TreeLogging_log;
@@ -115,15 +112,11 @@ switch (_Regrow) do
 			format ["Hiding Tree:%1 @ %2", _Tree, _Position] call ExileServer_TreeLogging_log;
 		};
 		_Tree hideObjectGlobal true;
-
 		_randBush = selectRandom ["Exile_Plant_BrownBush","Exile_Plant_GreenBush3","Exile_Plant_GreenBush5"];
 		_BushObject = createVehicle  [_randBush,[0,0,0], [], 0, "NONE"];
-		_BushId = netId _BushObject;
 		_BushObject setDir random 360; 
 		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
-		//RegrowObjectArray pushBack _BushId;
-		//RegrowObjectArrayServer pushBack [_treeID,_BushId];
 		if (DamnTreeDebug) then
 		{
 			format ["Created replacement bush at Tree:%1 with NETID %2", _BushObject, _BushId] call ExileServer_TreeLogging_log;
@@ -135,7 +128,6 @@ switch (_Regrow) do
 	};
 	case 4:
 	{
-		// HAHA THE TREE REVIVES!
 		if (DamnTreeDebug) then
 		{
 			format ["REVIVE Tree:%1 @ %2 with ID: %3", _Tree, _Position, _treeID] call ExileServer_TreeLogging_log;
