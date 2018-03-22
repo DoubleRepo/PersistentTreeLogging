@@ -6,11 +6,6 @@ class CfgPatches {
         };
         units[] = {};
         weapons[] = {};
-        
-        class config {
-            FuckingWhen = 2;
-            DamnTreeDebug = false;
-        };
     };
 };
 class CfgFunctions {
