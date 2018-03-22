@@ -1,7 +1,7 @@
 # PersistentTreeLogging
 Tree Logging Persistent for Exile.
 
-# Todo
+# -not- Todo
 -Make tree's regrow realistic by setting a status code to the entry after a "" mount of days. 
 - Sorta Done
 
