@@ -53,9 +53,9 @@ switch (_Regrow) do
 		};
 		_Tree hideObjectGlobal true;
 		_randBush = selectRandom ["a3\plants_f\clutter\c_bigFallenBranches_pine03.p3d","a3\plants_f\clutter\c_bigFallenBranches_pine02.p3d","a3\plants_f\clutter\c_bigFallenBranches_pine.p3d"];
-		_BushObject = createSimpleObject [_randBush,_position]; 
+		_BushObject = createSimpleObject [_randBush,[0,0,0]]; 
 		_BushObject setDir random 360; 
-		_BushObject setPosATL [position _BushObject select 0,position _BushObject select 1, 0]; 
+		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
 		if (DamnTreeDebug) then
 		{
@@ -71,9 +71,9 @@ switch (_Regrow) do
 		format ["Hiding Tree:%1 @ %2", _Tree, _Position] call ExileServer_TreeLogging_log;
 		_Tree hideObjectGlobal true;
 
-		_BushObject = createSimpleObject ["a3\plants_f\clutter\c_Thistle_High_Dead.p3d",_position]; 
+		_BushObject = createSimpleObject ["a3\plants_f\clutter\c_Thistle_High_Dead.p3d",[0,0,0]]; 
 		_BushObject setDir random 360; 
-		_BushObject setPosATL [position _BushObject select 0,position _BushObject select 1, 0]; 
+		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
 		if (DamnTreeDebug) then
 		{
@@ -92,10 +92,10 @@ switch (_Regrow) do
 		};
 		_Tree hideObjectGlobal true;
 
-		_BushObject = createSimpleObject ["a3\plants_f\bush\b_neriumo2d_f.p3d",_position]; 				
+		_BushObject = createSimpleObject ["a3\plants_f\bush\b_neriumo2d_f.p3d",[0,0,0]]; 				
 		_BushId = netId _BushObject;
 		_BushObject setDir random 360; 
-		_BushObject setPosATL [position _BushObject select 0,position _BushObject select 1, 0]; 
+		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
 		//RegrowObjectArray pushBack _BushId;
 		//RegrowObjectArrayServer pushBack [_treeID,_BushId];
@@ -117,10 +117,10 @@ switch (_Regrow) do
 		_Tree hideObjectGlobal true;
 
 		_randBush = selectRandom ["Exile_Plant_BrownBush","Exile_Plant_GreenBush3","Exile_Plant_GreenBush5"];
-		_BushObject = createVehicle  [_randBush,_position, [], 0, "NONE"];
+		_BushObject = createVehicle  [_randBush,[0,0,0], [], 0, "NONE"];
 		_BushId = netId _BushObject;
 		_BushObject setDir random 360; 
-		_BushObject setPosATL [position _BushObject select 0,position _BushObject select 1, 0]; 
+		_BushObject setPosATL [_position select 0,_position select 1, 0]; 
 		_BushObject setVectorUp surfaceNormal position _BushObject;
 		//RegrowObjectArray pushBack _BushId;
 		//RegrowObjectArrayServer pushBack [_treeID,_BushId];
