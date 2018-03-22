@@ -13,7 +13,7 @@ Tree Logging Persistent for Exile.
 
 -Fuck whut? 
 - Reduced spam and extdb calls.
-
+- Performance update sorta
 ## Configuration
 
 - 1: Add inside your mission config.cpp at the cfgcustomcode ExileServer_object_tree_network_chopTreeRequest and use the file provided inside MpMission/overwrites.
