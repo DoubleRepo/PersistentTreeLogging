@@ -25,15 +25,5 @@ Tree Logging Persistent for Exile.
 - 4: Drag the Server Addon to your ExileServer Addons folder and profit.
 
 ## License
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-## Credits
-Original code base by CoftSock.
+Befor Exile chopped shop share alike now, ask before reporting shit
 
-## Donations
-
-Fuck you and you're donations, send them to Exile.
-
-http://www.exilemod.com/donate/make-donation/
-
-
-You still reading? Fine,, Questions and other BS, or if you really wanna donate me a cup of coffee https://discord.united-gamers.online
